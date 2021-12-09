@@ -1,0 +1,25 @@
+---
+title: "Amortiguadores de masa sintonizados - Parte 1"
+author: "Luis Damián García Vega, José de Jesús García Piña, Gabriel Peytral Borja"
+date: "9/12/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\bcenter}{\begin{center}}
+\newcommand{\ecenter}{\end{center}}
+
+\bcenter
+# Proyecto final de Ecuaciones Diferenciales Ordinarias: 
+# Amoritiguadores de masa sintonizados
+\ecenter
+
+## **Introducción**
+
+### *Actividad 1*
+### *Actividad 2*
+### *Actividad 3*
+### *Actividad 4*
