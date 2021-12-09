@@ -23,16 +23,26 @@ Esta no es la única aplicación práctica que tienen, también pueden ser usado
 La eficacia de disipación de energía de un TMD depende de la precisión de su sintonía, el tamaño de su masa en comparación con la masa modal de su modo objetivo, es decir, su relación de masa, y la extensión de la amortiguación interna incorporada en el amortiguador de masa sintonizado.  
 Básicamente, uno puede pensar en un TMD como un contrapeso mecánico para una estructura que consta de una masa en movimiento (aproximadamente 1 a 2% de la masa de la estructura). 
 
-**Modelado de un amortiguador de masa sintonizado**
+**Modelado de un amortiguador de masa sintonizado**  
 Representamos la rigidez de la masa original de un sistema usando un resorte y la absorción de energía usando un amortiguador. Adjuntaremos un resorte y un amortiguador (TMD) a la masa original y exploraremos qué tanto se puede reducir las vibraciones debidas a fuerzas externas. Se caracterizará el desplazamiento de la masa sobre una posición de equilibrio inicial por un solo grado de libertad. Sin embargo, en el caso del TMD, agregaremos una segunda masa y un resorte a la masa primaria. El desplazamiento de la masa TMD se caracterizará por un grado separado de libertad sobre su propia posición de equilibrio inicial. Por lo tanto, un TMD es un par de osciladores armónicos amortiguados acoplados.  
 Una gran masa $m_1$ en un "resorte" con constante de resorte $k_1$ se acopla a una masa más pequeña $m_2$ por un resorte con constante de resorte $k_2$ y un amortiguador con coeficiente de amortiguación $c_2$. La gran masa también podría estar naturalmente amortiguada con un coeficiente de amortiguación o de restauración $c_1$. Para nuestro estudio, tomamos $c_1 = 0$ y $c_2 = 0$. Es decir, supondremos que no hay resistencia ni amortiguamiento de la masa original o del TMD. Al ajustar los valores de $m_2$ y $k_2$ la amplitud máxima de las oscilaciones de $m_1$ se puede reducir.  
 En este caso sin resistencia ($c_1 = 0$ y $c_2 = 0$) cuando aplicamos una carga externa o fuerza impulsora, $f(t)$, tenemos el siguiente modelo de ecuación diferencial de un solo grado de libertad para el desplazamiento, $y(t)$, de nuestra masa desde su equilibrio estático, es decir, un sistema de resorte-masa (sin salpicadero):
-$$my''(t) + ky(t) = f(t), y(0)=y_0, y'(0) = v_0; (1)$$
+$$my''(t) + ky(t) = f(t), \ (1) \\y(0)=y_0, \\ y'(0) = v_0; $$
 La frecuencia natural de masa $m_1$ se puede obtener de la solución de la porción homogénea,(2), de nuestra ecuación diferencial (1),
 
-$$my''(t) + ky(t) = 0, \ y(0)=y_0, \  y'(0) = v_0; \ (2)$$
-De (3) vemos que la frecuencia natural de la solución no impulsada u homogénea de (2) es $\omega_0 = \sqrt \frac {k}{m}  $ mientras que la solución homogénea completa para (1) es:
-$$y(t)= \frac {v_0 \sqrt m \sin(\sqrt \frac {k}{m}t)+y_0 \sqrt k \cos(\sqrt \frac {k}{m} t)}{\sqrt k}, \ (3) $$
+$$ my''(t) + ky(t) = 0, \ (2) \\ y(0)=y_0, \\  y'(0) = v_0; $$  
+De (3) vemos que la frecuencia natural de la solución no impulsada u homogénea de (2) es $\omega_0=\sqrt\frac{k}{m}$ mientras que la solución homogénea completa para (1) es:  
+$$ y(t)= \frac {v_0 \sqrt m \sin(\sqrt \frac {k}{m}t)+y_0 \sqrt k \cos(\sqrt \frac {k}{m} t)}{\sqrt k}, \ (3) $$  
+Recuerde lo que sucede si la función del controlador $f(t)$ tiene la misma frecuencia que la frecuencia natural, del sistema resorte-masa - RESONANCIA y problema. Para ver ésto dividimos ambos lados de (1) por $ m $ y reordene la ecuación resultante usando $$ t \omega^2_0 = \frac{k}{m} $$ para obtener (4):
+$$ y''(t) + \omega^2_0 \space y(t) = \frac{1}{m} f(t), \ (4) \\ y(0) = y_0,  \\ y'(0)= v_0 $$
+Ahora, si $f(t) = \sin ( \omega t)$ y este controlador tiene la misma frecuencia natural que nuestro sistema de masas, es decir, $\omega = \omega_0$ , entonces nuestra solución de (4) es:
+$$y(t) = - \frac {t \cos( \omega t)}{2m \omega_0}+ \frac { \sin( \omega_0 t)}{2m \omega^2_0} - \frac{ \sin( \omega_0 t) \cos^2( \omega_o t)}{2m\omega^2_0} + \frac { \sin(2 \omega_0 t) \cos( \omega t)}{4m \omega^2_0} + \frac{ v_0 \sin( \omega_0 t)}{ \omega_0}+ y_0 \cos( \omega_0 t ), \ (5)$$
+El término clave en esta solución es el primer término. Todos los demás términos son del periodo $\frac{2 \pi}{m}$ con amplitudes finitas. El primer término $\frac {-t \cos ( \omega_0 t)}{2 \omega_0}$ crece sin límite y en consecuencia nos referimos a este fenómeno de solución como resonancia. Para los siguientes valores, $\omega_0 = 1$, $y_0 = 2$, $v_0 = 0$ y $m = 1$ se grafique nuestra solución (5) sobre el intervalo de tiempo [0, 100] en la Figura 1 y observe que la solución crece indefinidamente; esto es resonancia.
+
+```{r}
+
+```
+
 
 ### *Actividad 1*
 Usando la Segunda Ley de Newton, que dice que la masa multiplicada por la aceleración de esa masa es igual a la suma de todas las fuerzas externas que actúan sobre la masa, y la Figura 4 como fuente del Diagrama de cuerpo libre,muestran que las ecuaciones que gobiernan los movimientos de la estructura y el amortiguador están dadas por:
