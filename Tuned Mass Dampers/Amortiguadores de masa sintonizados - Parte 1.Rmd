@@ -2,7 +2,9 @@
 title: "Amortiguadores de masa sintonizados - Parte 1"
 author: "Luis Damián García Vega, José de Jesús García Piña, Gabriel Peytral Borja"
 date: "09/12/2021"
-output: pdf_document
+output:
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -74,11 +76,16 @@ $$ 10 \space x''_1(t) = -90 x_1(t))+10 \space cos(3t)$$
 $$ \space x''_2(t) = -x_1(t))  $$
 Los valores de las variables del sistma nos proveen de información útil para interpretar nuestras ecuaciones. El valor de $k_2=0$ elimina por completo la constante del resorte quedándonos solamente con la fuerza aplicada a la estructura. El valor $m_1 = 10$ en contraste con $m_2 = 1$ nos indica que $m_2$ es el 10% de $m_1$. Esto es una relación de masa un poco exagerado en términos prácticos. El valor $k_1 = 90$ nos indica una constante alta que indica que requerirá una fuerza mayor para mover la masa. El valor de $\omega = 3$ nos indica que $k= 9m $ Es decir que la frecuencia natural da como resultado 3. 
 
-c) Resuelva la ecuacion diferencia simple resultante para el movimiento de la masa $m_1$ durante un intervalo de tiempo de 20 unidades y grafique el desplazamiento de esa masa, $x_1(t)$, durante ese intervalo de tiempo. Explique las observaciones.  
-  
-Cálculos < >
+c) Resuelva la ecuacion diferencial simple resultante para el movimiento de la masa $m_1$ durante un intervalo de tiempo de 20 unidades y grafique el desplazamiento de esa masa, $x_1(t)$, durante ese intervalo de tiempo. Explique las observaciones. 
+*Cálculos:*  
+<https://drive.google.com/file/d/1IIkrJmsNC-0gljtXQ_LOO4ae-1JUD1a6/view?usp=sharing>  
 
-d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90$ con $y(0)=0$ y $y'(0)=0$ mientras $f(t)=10 \space\space \cos (3t)$ y establezca $m_2=1$ con valores variables de $k_2$. Mantenga $c_1=0$ y $c_2=0$. ¿Qué observa en la amplitud máxima de la masa inicial $m_1$ cuando se cambia $k_2$? 
+<https://drive.google.com/file/d/1IZ9YWFgteNLFU6vdUNTTepDHn0TNbrJn/view?usp=sharing>
+  
+
+d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90$ con $y(0)=0$ y $y'(0)=0$ mientras $f(t)=10 \space\space \cos (3t)$ y establezca $m_2=1$ con valores variables de $k_2$. Mantenga $c_1=0$ y $c_2=0$. ¿Qué observa en la amplitud máxima de la masa inicial $m_1$ cuando se cambia $k_2$?  
+
+A medida que $k_2$ aumenta, la amplitud máxima de $m_1$ disminuye.
 
 ![](2_k2=0.1.jpg){width=30% height=30%}
 ![](2_k2=1.jpg){width=30% height=30%}
@@ -87,7 +94,9 @@ d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90
 ![](2_k2=1000.jpg){width=30% height=30%}
 ![](2_k2=10000.jpg){width=30% height=30%}
 
-e) De (d) ¿cuál es el "mejor" valor de $k_2$? Asegúrese de definir la palabra "mejor".
+e) De (d) ¿cuál es el "mejor" valor de $k_2$?  
+Un valor más alto en k disminuye el el tiempo de respuesta y las oscilaciones de la mása más grande. Por lo tanto el valor para la constante del resorte $k_2=10,000$ es el mejor valor.  
+
 f) Para obtener el mejor valor de $k_2$, determine el desplazamiento de amplitud máximo para la masa $m_1 ,\space\space x_1 (t)$ en un rango de frecuencias  
 
 ### *Actividad 3*
@@ -95,11 +104,10 @@ Consideremos otra configuración comparable a la Actividad 2 para la práctica. 
 a) Determine la forma de las ecuaciones de la actividad anterior cuando $c_1 = 0$ y $c_2 = 0$
 b) En el sistema resultante use $m_1 = 10$ y $k_1 = 90$ con $y(0) = 0$ y $y'(0) = 0$ mientras $f(t) =10 \space\space \cos (3t)$ y ajuste $m_2 = 0.1$ con $k_2 = 0$, es decir, retire el segundo sistema de masa. Explique la importancia física e impacto de los números 10, 90 y 3 en la oración anterior en términos del movimiento del oscilador inicial.
 c) Resuelva la ecuación diferencial simple resultante para el movimiento de la masa $m_1$ durante un intervalo de tiempo de 20 unidades y grafique el desplazamiento de esa masa, $x_1 (t)$, durante ese intervalo de tiempo. Explique las observaciones.  
-*Cálculos:*  
-<https://drive.google.com/file/d/1IIkrJmsNC-0gljtXQ_LOO4ae-1JUD1a6/view?usp=sharing>   
-<https://drive.google.com/file/d/1IZ9YWFgteNLFU6vdUNTTepDHn0TNbrJn/view?usp=sharing>
 
-d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90$ con $y(0)=0$ y $y'(0)=0$ mientras $f(t)=5 \space\space \cos (3t)$ y establezca $m_2=0.1$ con valores variables de $k_2$. Mantenga $c_1=0$ y $c_2=0$. ¿Qué observa en la amplitud máxima de la masa inicial $m_1$ cuando se cambia $k_2$? Defiende tu observación con datos y/o gráficas.  
+
+d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90$ con $y(0)=0$ y $y'(0)=0$ mientras $f(t)=5 \space\space \cos (3t)$ y establezca $m_2=0.1$ con valores variables de $k_2$. Mantenga $c_1=0$ y $c_2=0$. ¿Qué observa en la amplitud máxima de la masa inicial $m_1$ cuando se cambia $k_2$?  
+A medida que $k_2$ aumenta, la amplitud máxima de $m_1$ disminuye.
 
 ![](3_k2=0.1.jpg){width=30% height=30%}
 ![](3_k2 =1.jpg){width=30% height=30%}
@@ -109,12 +117,14 @@ d) En las ecuaciones de la actividad anterior use los valores $m_1=10$ y $k_1=90
 ![](3_k2=10000.jpg){width=30% height=30%}
 
 
-e) De (d) ¿cuál es el "mejor" valor de $k_2$? Asegúrese de definir la palabra "mejor".
+e) De (d) ¿cuál es el "mejor" valor de $k_2$? 
+Un valor más alto en k disminuye el el tiempo de respuesta y las oscilaciones de la mása más grande. Por lo tanto el valor para la constante del resorte $k_2=10,000$ es el mejor valor.
+ 
 f) Para obtener el mejor valor de $k_2$, determine el desplazamiento de amplitud máximo para la masa $m_1 ,\space\space x_1 (t)$en un rango de frecuencias  
 
 ### *Actividad 4*
 Del material introductorio para este escenario ofrecido anteriormente y los análisis en las Actividades 2 y 3 realiza una descripción de cómo construir un TMD para detener los fenómenos de resonancia en el caso de las siguientes ecuaciones, que son el caso de las ecuaciones de la actividad 1 donde no hay amortiguamiento, es decir, $c_1 = 0$ y $c_2 = 0$:
 $$ m_1 \space x''_1(t) = -k_1 x_1(t)-k_2(x_1(t)-x_2(t))+p_0 \space cos(\omega t), \space\space\space\space (1)$$
 $$ m_2 \space x''_2(t) = -k_2(x_2(t)-x_1(t)), \space\space\space\space (2) $$  
-Cálculos: 
+*Cálculos:* 
 <https://drive.google.com/file/d/1hOhWC6mFchmd_5QtLWcilslzbOfT_JI1/view?usp=sharing>
